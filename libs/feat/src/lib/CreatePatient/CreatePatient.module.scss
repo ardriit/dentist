@@ -1,0 +1,10 @@
+.createPatient {
+  padding: 20px;
+  align-self: center;
+  // width: 50%;
+}
+.selectOption {
+  &:hover {
+    background-color: #b3e8fd !important;
+  }
+}

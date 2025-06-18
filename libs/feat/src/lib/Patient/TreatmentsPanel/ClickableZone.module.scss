@@ -1,0 +1,74 @@
+.container {
+  position: relative;
+  width: 40px; /* Increased width */
+  height: 40px; /* Increased height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.zone {
+  position: absolute;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Center square
+.center {
+  width: 16px; /* Adjusted size */
+  height: 16px; /* Adjusted size */
+  background-color: rgb(0, 116, 248);
+  opacity: 0.35;
+  border: 1px solid black;
+}
+
+// Trapezoidal outer zones
+.top,
+.bottom,
+.left,
+.right {
+  position: absolute;
+  background-color: rgb(0, 116, 248);
+  opacity: 0.35;
+}
+
+.top {
+  width: 40px; /* Adjusted size */
+  height: 14px; /* Adjusted size */
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 40px 0, 24px 14px, 16px 14px);
+}
+
+.bottom {
+  width: 40px; /* Adjusted size */
+  height: 14px; /* Adjusted size */
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 14px, 40px 14px, 24px 0, 16px 0);
+}
+
+.left {
+  width: 14px; /* Adjusted size */
+  height: 40px; /* Adjusted size */
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 14px 16px, 14px 24px, 0 40px);
+}
+
+.right {
+  width: 14px; /* Adjusted size */
+  height: 40px; /* Adjusted size */
+  top: 0;
+  right: 0;
+  clip-path: polygon(14px 0, 0 16px, 0 24px, 14px 40px);
+}
+
+.selected {
+  opacity: 0.8;
+}

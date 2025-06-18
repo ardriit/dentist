@@ -1,0 +1,19 @@
+.container {
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--gray-border);
+  padding: 3px;
+  .treatmentsHistoryHeader {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: larger;
+  }
+  .treatmentsHistoryTable {
+    height: 16rem;
+    overflow-y: auto;
+    .customContainer {
+      margin: 0px;
+    }
+  }
+}

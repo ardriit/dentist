@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Company {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Users     User[]
+  Client    Client[]
+
+  @@map("company")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  email      String   @unique
+  company_id Int
+  password   String
+  firstName  String
+  lastName   String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  Company    Company  @relation(fields: [company_id], references: [id])
+  Client     Client[]
+
+  @@map("users")
+}
+
+model Client {
+  id         Int       @id @default(autoincrement())
+  firstName  String
+  lastName   String
+  email      String?
+  phone      String?
+  dob        DateTime?
+  gender     String?
+  city       String?
+  country    String?
+  address    String?
+  postalCode String?
+  allergies  String?
+  bloodGroup String?
+  created_by Int
+  company_id Int
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  Company Company @relation(fields: [company_id], references: [id])
+  User    User    @relation(fields: [created_by], references: [id])
+
+  @@map("clients")
+}

@@ -1,0 +1,9 @@
+{
+  "name": "DentalPro-fe",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/DentalPro-fe",
+  "projectType": "application",
+  "tags": ["scope:fe"],
+  "// targets": "to see all targets run: nx show project DentalPro-fe --web",
+  "targets": {}
+}

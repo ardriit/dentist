@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  background-color: var(--primary-bg);
+  color: #fff;
+  align-items: center;
+  .searchBar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    Button {
+      padding: 12px;
+    }
+  }
+  .userMenu {
+    margin-right: 20px;
+  }
+}

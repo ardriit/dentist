@@ -1,0 +1,19 @@
+.card {
+  background-color: var(--white);
+  padding: 15px;
+  margin: 15px;
+
+  .header {
+    color: var(--primary-bg);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0px;
+  }
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  margin: 30px;
+}

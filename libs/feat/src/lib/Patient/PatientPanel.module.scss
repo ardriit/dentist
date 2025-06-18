@@ -1,0 +1,16 @@
+.patientContainer {
+  width: 450px;
+  padding: 15px;
+
+  .details {
+    display: flex;
+    gap: 15px;
+
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
